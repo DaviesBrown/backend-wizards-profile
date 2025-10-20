@@ -132,19 +132,5 @@ curl -i http://localhost:3000/health
 
 To test fallback behaviour, set `FACT_FALLBACK` and force the external request to fail (e.g., by setting `CATFACT_URL` to an invalid host) and request `/me`.
 
-
-Also include a short write-up or post (LinkedIn/Dev.to/Hashnode/Medium/X) describing your approach and screenshots showing the endpoint response.
-
-## Notes & recommendations
-
-- The project includes sensible defaults so it runs out-of-the-box. For production use, consider adding logging, rate limiting, and monitoring.
-- Add a small CI check (lint/tests) to validate the API contract on pushes.
-
-## License
-
-This repository is currently unlicensed. Add a LICENSE file if you plan to publish it.
-
----
-
 README generated/updated on 2025-10-20 to match the current implementation.
 
