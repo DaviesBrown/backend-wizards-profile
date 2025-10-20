@@ -33,7 +33,6 @@ app.get("/me", async (req, res) => {
     };
     res.status(200).json(data);
   } catch (err) {
-    // If there's a fallback configured, return 200 with fallback fact.
     if (process.env.FACT_FALLBACK) {
       const data = {
         status: "success",
@@ -44,7 +43,6 @@ app.get("/me", async (req, res) => {
       return res.status(200).json(data);
     }
 
-    // Otherwise return 502 Bad Gateway with an error JSON
     res.status(502).json({
       status: "error",
       message: "Unable to fetch cat fact from external API",
